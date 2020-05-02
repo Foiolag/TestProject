@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestProject.Views"
-        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:cal="http://www.caliburnproject.org"      
         mc:Ignorable="d"
         Title="MainWindowView" Height="450" Width="800">
-
+    
     <Window.Resources>
         <local:LookupConverter x:Key="LookupConverter" />
 
@@ -27,9 +27,11 @@
         </Style>
     </Window.Resources>
     
-    <Grid Margin="5">
+    <StackPanel Margin="5">
 
         <Calendar SelectionMode="MultipleRange"
                   CalendarDayButtonStyle="{DynamicResource CalendarDayButtonStyle}" />
-    </Grid>
+
+        <Button x:Name="btAddDay" Content="ADD Day" Width="200"/>
+    </StackPanel>
 </Window>

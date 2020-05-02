@@ -14,5 +14,13 @@ namespace TestProject.ViewModels
         }
        
         public HashSet<DateTime> Dates { get; } = new HashSet<DateTime>();
+
+
+        public void btAddDay()
+        {
+            //It is not the most suitable way, just for example
+            Dates.Add(DateTime.Today.AddDays(6));
+            NotifyOfPropertyChange(() => Dates);
+        }
     }
 }
